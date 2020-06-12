@@ -1,13 +1,15 @@
-version: '3'
+version: '3.3'
 
 services: 
     app:
         container_name: astro
+        volumes:
+            - "~/Public/astro:/app:rw"
+            - /app/node_modules
+            # - "~/Public/astro/node_modules:/app/node_modules:rw"
         restart: always
         build: .
         ports: 
-            - '80:5001'
+            - '90:4000'
         environment:
-            - APP_PORT=5001
-        volumes:
-            - "~/Public/astro:/app:rw"
+            - APP_PORT=4000

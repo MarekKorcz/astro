@@ -2,13 +2,21 @@
   "name": "astro",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarekKorcz/astro.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarekKorcz/astro/issues"
+  },
+  "homepage": "https://github.com/MarekKorcz/astro#readme",
   "devDependencies": {
     "nodemon": "^2.0.3"
   },
