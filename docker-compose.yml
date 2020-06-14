@@ -6,10 +6,12 @@ services:
         volumes:
             - "~/Public/astro:/app:rw"
             - /app/node_modules
-            # - "~/Public/astro/node_modules:/app/node_modules:rw"
         restart: always
         build: .
         ports: 
-            - '90:4000'
+            - "${HOST_APP_PORT}:${CONTAINER_APP_PORT}"
         environment:
-            - APP_PORT=4000
+            - "HOST_APP_PORT=${HOST_APP_PORT}"
+            - "CONTAINER_APP_PORT=${CONTAINER_APP_PORT}"
+            - "CONTACT_FORM_EMAIL=${CONTACT_FORM_EMAIL}"
+            - "CONTACT_FORM_PASS=${CONTACT_FORM_PASS}"
