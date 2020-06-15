@@ -1,12 +1,11 @@
 const router = require('express').Router()
-const pathToViews = '/app/views/common/'
 
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
     
-    res.sendFile('homepage.html', {root: pathToViews})
+    res.render('common/homepage')
 })
 
-router.post('/contact-message', async (req, res) => {
+router.post('/contact-message', (req, res) => {
 
     let name = req.body.name
     let email = req.body.email

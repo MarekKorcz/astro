@@ -7,6 +7,9 @@ const {
 const express = require('express')
 const app = express()
 
+// set view engine to app
+app.set('view engine', 'ejs')
+
 // request body parser
 const bodyParser = require('body-parser')
 app.use(bodyParser())
