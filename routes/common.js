@@ -68,4 +68,9 @@ router.get('/session', (req, res) => {
     res.render('common/session')
 })
 
+router.get('/candling', (req, res) => {
+    
+    res.render('common/candling')
+})
+
 module.exports = router
