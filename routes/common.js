@@ -55,7 +55,12 @@ router.post('/contact-message', (req, res) => {
                 return res.end(JSON.stringify(outcome))
             }
         })
-    }    
+    }
+})
+
+router.get('/reservation', (req, res) => {
+    
+    res.render('common/reservation')
 })
 
 module.exports = router
