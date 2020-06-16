@@ -63,4 +63,9 @@ router.get('/reservation', (req, res) => {
     res.render('common/reservation')
 })
 
+router.get('/session', (req, res) => {
+    
+    res.render('common/session')
+})
+
 module.exports = router
